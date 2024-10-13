@@ -20,6 +20,10 @@ public class Main {
         System.out.println("Maximale Summe: " + elem.maximaleSumme());
 
         // Ubung 3
-
+        BigNumbersOperationen bigOp = new BigNumbersOperationen();
+        List<Integer> suma = bigOp.summeGrossZahlen(Arrays.asList(1,3,0,0,0,0,0,0,0), Arrays.asList(8,7,0,0,0,0,0,0,0));
+        System.out.println(suma);
+        List<Integer> inmultire = bigOp.multiplikationGrosseZahlen(Arrays.asList(2,3,6,0,0,0,0,0,0),2);
+        System.out.println(inmultire);
     }
 }
