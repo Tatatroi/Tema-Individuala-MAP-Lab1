@@ -22,8 +22,16 @@ public class Main {
         // Ubung 3
         BigNumbersOperationen bigOp = new BigNumbersOperationen();
         List<Integer> suma = bigOp.summeGrossZahlen(Arrays.asList(1,3,0,0,0,0,0,0,0), Arrays.asList(8,7,0,0,0,0,0,0,0));
-        System.out.println(suma);
+        System.out.println("Suma: " + suma);
         List<Integer> inmultire = bigOp.multiplikationGrosseZahlen(Arrays.asList(2,3,6,0,0,0,0,0,0),2);
-        System.out.println(inmultire);
+        System.out.println("Inmultire: " + inmultire);
+        List<Integer> scadere = bigOp.diferenzZahlen(Arrays.asList(8,3,0,0,0,0,0,0,0), Arrays.asList(5,4,0,0,0,0,0,0,0));
+        System.out.println("Scadere: " + scadere);
+        List<Integer> impartire = bigOp.divisionGrosseZahlen(Arrays.asList(2,3,6,0,0,0,0,0,0),2);
+        System.out.println("Impartire: " + impartire);
+
+        //Ubung 4
+
+
     }
 }
