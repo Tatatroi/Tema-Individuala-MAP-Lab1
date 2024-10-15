@@ -12,12 +12,11 @@ public class AfisareNote {
 
     // Erste Methode
 
-
     public List<Integer> notePicate(List<Integer> noteElevi) {
         List<Integer> temp = new ArrayList<>();
 
         for(Integer nota : noteElevi ) {
-            if(nota < 38)temp.add(nota);
+            if(nota < 38) temp.add(nota);
         }
 
         return temp;
@@ -25,7 +24,11 @@ public class AfisareNote {
 
     // Zweite Methode
     public int mediaPeClasa(List<Integer> noteElevi) {
-        int suma = noteElevi.stream().reduce(0,(a,b)->a+b);
+        //int suma = noteElevi.stream().reduce(0,(a,b)->a+b);
+        int suma = 0;
+        for(int i = 0; i<noteElevi.size(); i++) {
+            suma += noteElevi.get(i);
+        }
         return suma/noteElevi.size();
     }
 
@@ -36,7 +39,7 @@ public class AfisareNote {
         for(Integer nota : noteElevi ) {
             if(nota < 38)temp.add(nota);
             else if(nota >= 38 && nota <= 100){
-                if(nota % 5 == 1 && nota % 5 == 2)temp.add(nota + (5 - nota % 5));
+                if(nota % 5 == 3 || nota % 5 == 4)temp.add(nota + (5 - nota % 5));
                 else temp.add(nota);
             }
         }
@@ -44,7 +47,12 @@ public class AfisareNote {
     }
 
     public int notaMaximaRotunjita(List<Integer> noteElevi) {
-        return noteElevi.stream().max(Integer::compare).get();
+        //return noteElevi.stream().max(Integer::compare).get();
+        int Max = -1;
+        for(int i = 0; i<noteElevi.size(); i++) {
+            if(noteElevi.get(i) > Max) Max = noteElevi.get(i);
+        }
+        return Max;
     }
 
 }

@@ -5,12 +5,20 @@ import java.util.List;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        System.out.println();
+        System.out.println("---------------------------------------------");
+        System.out.println();
+
         // Ubung 1
         AfisareNote listaNote = new AfisareNote(Arrays.asList(12,23,39,56,87,97,34,87,53,97,53,100));
-        System.out.println(listaNote.notePicate(Arrays.asList(12,23,39,56,87,97,34,87,53,97,53,100)));
-        System.out.println(listaNote.mediaPeClasa(Arrays.asList(12,23,39,56,87,97,34,87,53,97,53,100)));
-        System.out.println(listaNote.noteRotunjite(Arrays.asList(12,23,39,56,87,97,34,87,53,97,53,100)));
-        System.out.println(listaNote.notaMaximaRotunjita(listaNote.noteRotunjite(Arrays.asList(12,23,39,56,87,97,34,87,53,97,53))));
+        System.out.println("Note picate: " + listaNote.notePicate(Arrays.asList(12,23,39,56,87,97,34,87,53,97,53,100)));
+        System.out.println("Media pe clasa: " + listaNote.mediaPeClasa(Arrays.asList(12,23,39,56,87,97,34,87,53,97,53,100)));
+        System.out.println("Note rotunjite" + listaNote.noteRotunjite(Arrays.asList(12,23,39,56,89,97,34,87,58,97,53,99)));
+        System.out.println("Nota maxima rotunjita: " + listaNote.notaMaximaRotunjita(listaNote.noteRotunjite(Arrays.asList(12,23,39,56,89,97,34,87,58,97,53,99))));
+
+        System.out.println();
+        System.out.println("---------------------------------------------");
+        System.out.println();
 
         // Ubung 2
         ArraysOperationen elem = new ArraysOperationen(Arrays.asList(3,6,5,7,11,15,32,56,100));
@@ -18,6 +26,10 @@ public class Main {
         System.out.println("Minimale Zahl: " + elem.minimaleZahl());
         System.out.println("Minimale Summe: " + elem.minimaleSumme());
         System.out.println("Maximale Summe: " + elem.maximaleSumme());
+
+        System.out.println();
+        System.out.println("---------------------------------------------");
+        System.out.println();
 
         // Ubung 3
         BigNumbersOperationen bigOp = new BigNumbersOperationen();
@@ -30,8 +42,18 @@ public class Main {
         List<Integer> impartire = bigOp.divisionGrosseZahlen(Arrays.asList(2,3,6,0,0,0,0,0,0),2);
         System.out.println("Impartire: " + impartire);
 
-        //Ubung 4
+        System.out.println();
+        System.out.println("---------------------------------------------");
+        System.out.println();
 
+
+        //Ubung 4
+        ElektronikShop ekShop = new ElektronikShop();
+
+        System.out.println("Minimale tastatur: " + ekShop.minimaleTastatur(Arrays.asList(40,35,70,15,45)));
+        System.out.println("Maximale tastatur/USB: " + ekShop.maximalePrice(Arrays.asList(15,20,10,35),Arrays.asList(20,15,40,15)));
+        System.out.println("Afordable tastatur: " + ekShop.affordableTastatur(Arrays.asList(15,45,20),30));
+        System.out.println("Afordable pair: " + ekShop.affordablePair(Arrays.asList(8,12),Arrays.asList(40,60),60));
 
     }
 }
