@@ -32,13 +32,21 @@ public class BigNumbersOperationen {
 
         for (int i = celMare.size() - 1, j = celMic.size() - 1; i >= 0; i--, j--) {
             int cifraMare = celMare.get(i) - borrow;
-            int cifraMica = (j >= 0) ? celMic.get(j) : 0;
+            int cifraMica;
+
+            if (j >= 0) {
+                cifraMica = celMic.get(j);
+            } else {
+                cifraMica = 0;
+            }
+
             if (cifraMare < cifraMica) {
                 cifraMare += 10;
                 borrow = 1;
             } else {
                 borrow = 0;
             }
+
             diff = cifraMare - cifraMica;
             temp.add(diff);
         }
